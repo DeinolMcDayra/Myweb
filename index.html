@@ -14,9 +14,8 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
     
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
-<body>
 <body>
     <!-- Top Border Section -->
     <div class="top-border">
@@ -26,7 +25,7 @@
                 <li><a class="active" href="#about">ABOUT</a></li>
                 <li><a href="#works">WORKS</a></li>
                 <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#footer">CONTACTS</a></li> 
+                <li><a href="#contact">CONTACTS</a></li> 
             </ul>
             <div class="toggle-container">
                 <label class="switch">
@@ -47,7 +46,9 @@
         <div class="main_sec">
             <img src="cbg.png" alt="Profile Picture" class="profile-image" />
         </div>
-        <div class="about-section" id="about">
+
+        <!-- About Section -->
+        <section id="about" class="about-section active">
             <h2>About Me</h2>
             <p>
                 Hi, I'm Deinol, a second-year student studying Informatics 
@@ -57,7 +58,7 @@
                 what led me to start programming. I also enjoy problem-solving, as it 
                 allows me to approach challenges from different perspectives and 
                 develop innovative solutions.
-                <br></br>
+                <br><br>
             </p>
             <p class="more-text" id="moreText">
                 With the rapid advancement of technology, the rise of artificial 
@@ -69,7 +70,7 @@
                 nothing short of remarkable. This blend of logic and creativity fuels 
                 my enthusiasm to learn more about how these systems function and how 
                 they can be leveraged to solve real-world problems.
-                <br></br>
+                <br><br>
                 Currently, I’m delving deeper into web development, focusing on 
                 back-end technologies, and have been experimenting with Next.js. 
                 Additionally, I’m diving into machine learning and data science, 
@@ -80,10 +81,10 @@
             </p>         
             <button id="readMoreBtn" class="read-more-btn">Read More</button>
             <button id="readLessBtn" class="read-less-btn">Read Less</button>
-        </div>
+        </section>
 
         <!-- Works Section -->
-        <div class="works-section" id="works">
+        <section id="works" class="works-section">
             <h2>Latest Works</h2>
             <div class="works-container">
                 <div class="work-item">
@@ -119,10 +120,10 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Skills Section -->
-        <div class="skills-section" id="skills">
+        <section id="skills" class="skills-section">
             <h2>Skills and Tools I Use</h2>
             <div class="skills-container">
                 <!-- Front-end Development -->
@@ -161,7 +162,7 @@
                 <!-- Machine Learning -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <img src="machine-learning (1).png" alt="Machine Learning" class="skill-logo" />
+                        <img src="machine-learning.png" alt="Machine Learning" class="skill-logo" />
                         <h3>Machine Learning</h3>
                     </div>
                     <ul>
@@ -201,167 +202,106 @@
                         <li>Data Science and Machine Learning</li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <!-- JavaScript -->
-                <div class="skill-category">
-                    <div class="skill-header">
-                        <img src="java-script.png" alt="JavaScript" class="skill-logo" />
-                        <h3>JavaScript</h3>
+        <!-- Contact Form Section -->
+        <section id="contact" class="contact-section">
+            <h2>Send me a message</h2>
+            <div class="contact-container">
+                <!-- Left Column: Contact Form -->
+                <div class="contact-form">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required />
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Right Column: Social Links and FAQ -->
+                <div class="contact-links">
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank">
+                            <img src="linkedin-logo.png" alt="LinkedIn" class="social-logo" />
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com" target="_blank">
+                            <img src="github.png" alt="GitHub" class="social-logo" />
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="instagram.png" alt="Instagram" class="social-logo" />
+                            <span>Instagram</span>
+                        </a>
                     </div>
-                    <ul>
-                        <li>Website Development</li>
-                    </ul>
+
+                    <!-- FAQs Section -->
+                    <div class="faqs-container">
+                        <h3>FAQs</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What are my hobbies besides programming?</h4>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    I enjoy all kinds of sports, love reading, and watching movies and series.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What is my favorite programming language?</h4>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    My favorite programming language is Python.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What are my favorite movies/series?</h4>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Some of my favorites include Stranger Things, The Social Network, Interstellar, and Not Friends.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What is my favorite food?</h4>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Pizza and cheesy fries</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-<!-- FAQs Section -->
-<div class="faqs-section" id="faqs">
-    <h2>FAQs</h2>
-    <div class="faqs-container">
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What are my hobbies besides programming?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>
-                    I enjoy all kinds of sports, love reading, and watching movies and series.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What is my favorite programming language?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>
-                    My favorite programming language is Python.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What are my favorite movies/series?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>
-                    Some of my favorites include Stranger Things, The Social Network, Interstellar, and Not Friends.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>What is my favorite food?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Pizza and cheesy fries</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- JavaScript to toggle FAQ answer visibility -->
-<script>
-    document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', function() {
-            const answer = item.nextElementSibling;
-            const icon = item.querySelector('.toggle-icon');
-            
-            // Toggle the visibility of the answer
-            answer.style.display = answer.style.display === 'none' || answer.style.display === '' ? 'block' : 'none';
-            
-            // Change the icon
-            icon.textContent = answer.style.display === 'block' ? '-' : '+';
-        });
-    });
-</script>
-
-
-    <!-- Links Section -->
-    <div class="main">
-        <nav class="left-bottom-nav">
-            <ul>
-                <li><a href="#about"><b>About</b></a></li>
-                <li><a href="#footer"><b>Contacs</b></a></li>
-                <li><a href="#works"><b>Works</b></a></li>
-                <li><a href="#skills"><b>Skills and tools</b></a></li>
-            </ul>
-        </nav>
-
-        <!-- Right Links -->
-        <nav class="right-bottom-nav">
-            <ul>
-                <li>
-                    <a href="https://linkedin.com" target="_blank">
-                        <img src="white-linkedin (1).png" alt="LinkedIn" class="social-logo" />
-                        <b>LinkedIn</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com" target="_blank">
-                        <img src="white-git.png" alt="GitHub" class="social-logo" />
-                        <b>GitHub</b>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="instagram.png" alt="Instagram" class="social-logo" />
-                        <b>Instagram</b>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Contact Form Section -->
-    <div class="contact-section">
-        <h2>Send me a message</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer id="footer"> 
         <p>Copyright • Deinol McDayra - All Rights Reserved</p>
     </footer>
-
-    <!-- Script for Read More/Read Less -->
-    <script>
-        document.getElementById("readMoreBtn").addEventListener("click", function () {
-            document.getElementById("moreText").style.display = "block";
-            this.style.display = "none"; // Hide Read More button
-            document.getElementById("readLessBtn").style.display = "inline-block"; // Show Read Less button
-        });
-
-        document.getElementById("readLessBtn").addEventListener("click", function () {
-            document.getElementById("moreText").style.display = "none";
-            this.style.display = "none"; // Hide Read Less button
-            document.getElementById("readMoreBtn").style.display = "inline-block"; // Show Read More button
-        });
-    </script>
 </body>
 </html>
